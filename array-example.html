@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Array</h1>
+    <p id="demo"></p>
+    <script>
+      // data type
+      // number,string,bigint,null,undefined,object,
+
+      // object ---objext,array(object)
+      // object entity-car,person---object--properties and methods
+      //  const firstname = "Sharad";
+      //   const lastname = "Thenge";
+      //  const person = {
+      //    firstname: "Sharad",
+      //    lastname: "Thenge",
+      //   };
+      //   const car1 = "Renoult";
+      //  const car2 = "Suzuki";
+      //   const car3 = "Volvo";
+      //   const cars = ["Renault", "Suzuki", "Vovlo"];
+      const cars = [
+        {
+          name: "Volvo",
+          model: "400",
+        },
+        {
+          name: "Maruti",
+          model: 800,
+        },
+        {
+          name: "Volvo",
+          model: 600,
+        },
+      ];
+      document.getElementById("demo").innerHTML =`Car 1 Name: ${cars[0].name} car 1 Model:${cars[0].model} </br>
+      Car 2 Name: ${cars[1].name} Car 2 Model: ${cars[1].model} </br>
+      Car 3 Nmae: ${cars[2].name} Car 3 Model: ${cars[2].model}`;
+    </script>
+  </body>
+</html>
