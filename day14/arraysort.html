@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Array sorting methods</title>
+  </head>
+  <body>
+    <h1>Aray sorting</h1>
+    <input id="fruitsInputId" placeholder="Enter number" />
+    <button onclick="onaddNumberClicked()">Add number to the array</button>
+    <br />
+    <input type="text" placeholder="Enter Fruits" />
+    <button onclick="onAddFruitsClicked()">Add fruits to the array</button>
+    <p id="numId"></p>
+    <p id="fruitsId"></p>
+    <script>
+      const numbersArray = [];
+      const fruits = [];
+      const paragraphNumElement = document.getElementById("numId");
+      console.log("paragraphNumElement", paragraphNumElement);
+      const inputNumberElement = document.getElementById("numInputId");
+      inputNumberElement.value = 0;
+      console.log("inputNumberElement", inputNumberElement);
+      const fruitsInputElement = document.getElementById("fruitsInputId");
+      const fruitsParagraphElement = document.getElementById("fruitsId");
+      function onAddNumberClicked() {
+        // block of code
+        console.log("value of input box", inputNumberElement.value);
+        numbersArray.push(Number(inputNumberElement.value));
+
+        paragraphNumElement.innerHTML = numbersArray.join("|");
+      }
+      function onAddFruitsClicked() {
+        fruits.push(fruitsInputElement.value);
+        fruitsParagraphElement.innerHTML = fruits.join("|");
+      }
+    </script>
+  </body>
+</html>
