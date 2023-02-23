@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Arry Methods Example 2</h1>
+    <p id="demo"></p>
+    
+    <script>
+        // using splice method we can add new array and remove old array
+      const fruits = ["Banana", "Orange", "Apple", "Mango"];
+      fruits.splice(2, 0, "Lemon", "Kiwi");
+      document.getElementById("demo").innerHTML = fruits.join("|");
+    </script>
+  </body>
+</html>
