@@ -18,7 +18,7 @@
       cars.sort(function (a, b) {
         console.log("volue of a is::", a);
         console.log("value of b is::", b);
-        return a.year-b.year;
+        return b.year - a.year;
       });
       document.getElementById("demo").innerHTML = `cars: <br>
       1.Name :${cars[0].type}    year: ${cars[0].year}<br>
