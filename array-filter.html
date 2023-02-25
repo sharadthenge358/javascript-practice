@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <p id="demo"></p>
+    <p id="demo1"></p>
+    <script>
+      const numbers = [45, 4, 9, 16, 25];
+      const over18 = numbers.filter(function (item) {
+        return item > 18;
+      });
+      console.log("over18", over18);
+      document.getElementById("demo").innerHTML =
+        "filterd over 18 numbers::" + over18.join("*");
+      document.getElementById("demo1").innerHTML =
+        "original aray::" + numbers.join("*");
+    </script>
+  </body>
+</html>
