@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <p id="demo"></p>
+    <script>
+      const day = new Date().getDay();
+      console.log("The Current Day is::", day);
+      let weekday;
+      switch (day) {
+        case 0:
+          weekday = "Sunday";
+          break;
+        case 1:
+          weekday = "Monday";
+          break;
+        case 2:
+          weekday = "Tuesday";
+          break;
+        case 3:
+          weekday = "Wednesday";
+          break;
+        case 3:
+          weekday = "Thursday";
+          break;
+        case 4:
+          weekday = "Friday";
+          break;
+        case 5:
+          weekday = "Saturday";
+          break;
+      }
+
+      document.getElementById("demo").innerHTML = `Today is ${weekday}`;
+    </script>
+  </body>
+</html>
