@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Right Angle Tringle Using Stars</h1>
+    <input id="depth" type="number" />
+    <button onclick="handleonclickrighttringle()">
+      Print right angle tringle
+    </button>
+    <p id="demo"></p>
+    <script>
+      function handleonclickrighttringle() {
+        const n = Number(document.getElementById("depth").value);
+        let text = "";
+        for (let index = 1; index < n; index++) {
+          console.log("iteration external loop index value", index);
+          for (let j = 0; j < n - index; j++) {
+            console.log("iteration internal loop j value", j);
+
+            text += "&nbsp;&nbsp;";
+          }
+          for (let k = 0; k < index; k++) {
+            text += "*";
+          }
+          text += "</br>";
+        }
+        console.log(text);
+        document.getElementById("demo").innerHTML = text;
+      }
+    </script>
+  </body>
+</html>
