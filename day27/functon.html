@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <button onclick="myfunction()">call via normal</button>
+    <button onclick="myfunction()">call via arrow function</button>
+    <p id="demo"></p>
+    <script>
+      // normal javascript
+      function myfunction() {
+        console.log("this on click event", this);
+        document.getElementById("demo").innerHTML += this;
+        // block of code
+      }
+      // myfunction();
+      // blocl of code
+      // const personfullname = function (a, b) {};
+      //  personfullname(3, 5);
+      const newfunction = () => {
+        console.log("this on a click event", this);
+        document.getElementById("demo").innerHTML += this;
+      };
+      const numbers = [1, 2, 3, 4];
+      numbers.forEach((value, index, array) => {
+        console.log("value", value, index, array);
+      });
+      // map with arrow
+      const newAarrayNormalArrow = numbers.map((value) => {
+        return value;
+      });
+      // map with arrow function shorthand(only application if we have only one line return code)
+      const newArray = numbers.map((value) => value > 2);
+    </script>
+  </body>
+</html>
