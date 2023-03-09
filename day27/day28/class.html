@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <p id="demo"></p>
+    <script>
+      class car {
+        constructor(name, year) {
+          // block of code
+          this.name = name;
+          this.year = year;
+
+          console.log(
+            "constructed method called.this is used for initioalization"
+          );
+        }
+        age() {
+          const currentdate = new Date();
+          return currentdate.getFullYear() - this.year;
+        }
+      }
+      const car1 = new car("Tata", 2023);
+      const car2 = new car("Renault", 2022);
+      document.getElementById("demo").innerHTML =
+        car1.name +
+        "" +
+        car1.year +
+        "Age of car1::" +
+        car1.age() +
+        "</br>" +
+        car2.name +
+        "" +
+        car2.year +
+        "Age of car2::" +
+        car2.age();
+      //  console.log(new Number());
+    </script>
+  </body>
+</html>
